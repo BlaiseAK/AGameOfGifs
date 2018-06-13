@@ -2,6 +2,12 @@ var apiKey = "Zz5rHijIBLCzOKNuIDNFF57DAtKMWCyI";
 var gifId = "";
 var arrOfGifs = ["Captain America", "Spiderman", "Captain Marvel", "Iron Man", "Hulk", "Deadpool"];
 
+function alertSuperName() {
+  var superName = $(this).attr("data-name");
+  alert(superName);
+}
+
+
 function renderButtons() {
 
     // Deleting the movie buttons prior to adding new movie buttons
@@ -9,10 +15,9 @@ function renderButtons() {
     $("#superHeroButtons").empty();
 
     // Looping through the array of movies
-    for (var i = 0; i < movies.length; i++) {
+    for (var i = 0; i < arrOfGifs.length; i++) {
 
       // Then dynamicaly generating buttons for each movie in the array.
-      // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
       var a = $("<button>");
       // Adding a class
       a.addClass("supers");
@@ -24,3 +29,18 @@ function renderButtons() {
       $("#superHeroButtons").append(a);
     }
   }
+
+  $("#add-super").on("click", function(event) {
+    event.preventDefault();
+
+    var hero = $("#super-input").val().trim();
+
+    arrOfGifs.push(hero);
+
+    renderButtons();
+
+  });
+
+  $(document).on("click", ".supers", alertSuperName);
+
+  renderButtons();
