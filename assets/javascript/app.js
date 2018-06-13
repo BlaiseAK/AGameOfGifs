@@ -1,17 +1,25 @@
-var apiKey = "Zz5rHijIBLCzOKNuIDNFF57DAtKMWCyI";
 var gifId = "";
 var arrOfGifs = ["Captain America", "Spiderman", "Captain Marvel", "Iron Man", "Hulk", "Deadpool"];
 
-function alertSuperName() {
+$(".super").on("click", function() {
   var superName = $(this).attr("data-name");
-  alert(superName);
-}
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+  superName + "&api_key=Zz5rHijIBLCzOKNuIDNFF57DAtKMWCyI&limit=10";
 
+
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function(response){
+    console.log(response)
+
+  })
+
+});
 
 function renderButtons() {
 
     // Deleting the movie buttons prior to adding new movie buttons
-    // (this is necessary otherwise we will have repeat buttons)
     $("#superHeroButtons").empty();
 
     // Looping through the array of movies
@@ -28,7 +36,7 @@ function renderButtons() {
       // Adding the button to the HTML
       $("#superHeroButtons").append(a);
     }
-  }
+  };
 
   $("#add-super").on("click", function(event) {
     event.preventDefault();
@@ -39,7 +47,7 @@ function renderButtons() {
 
     renderButtons();
 
-  });
+  }),
 
   $(document).on("click", ".supers", alertSuperName);
 
