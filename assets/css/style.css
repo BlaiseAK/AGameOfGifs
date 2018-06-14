@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
-    color: aliceblue;
+    
 }
 
 body{
-    background: black
+    background: black;
 }
 
 button{
@@ -12,16 +12,37 @@ button{
     margin: 10px;
     background: darkblue;
     border-radius: 12px;
-
+    color: aliceblue;
+    border-color: firebrick;
 }
 
 form{
     padding: 10px;
     margin: 10;
+    color: aliceblue;
 
 }
 
+#super-input {
+    color: black;
+}
+
+h4 {
+    color: aliceblue;
+}
+
 img {
-    height: 300px;
-    width: 500px;
+    height: 250px;
+    width: 400px;
+}
+
+p {
+    margin-top: 20px;
+    color: aliceblue;
+}
+
+.item {
+    float: left;
+    padding: 20px;
+    margin: 20px;
 }
