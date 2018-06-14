@@ -76,7 +76,9 @@ $(document).on("click", ".supers" ,function() {
 
         // Giving the image tag an src attribute of a proprty pulled off the
         // result item
-        personImage.attr("src", results[i].images.fixed_height.url);
+        personImage.attr("src", results[i].images.original_still.url);
+        // fixed_height is the one used to show the actioned
+        // how this will work...we will have 2 more variables/data-still & data-animate- from there we will lock in the path name of each then have the click be if/else statement to differ between still and animate.
 
         // Appending the paragraph and personImage we created to the "gifDiv" div we created
         gifDiv.append(p);
