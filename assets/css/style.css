@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+body{
+    background: black
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    background: darkblue;
+    border-radius: 12px;
+
+}
+
+form{
+    padding: 10px;
+    margin: 10;
+
+}
+
+img {
+    height: 300px;
+    width: 500px;
+}

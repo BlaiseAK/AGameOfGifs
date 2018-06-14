@@ -83,10 +83,9 @@ $(document).on("click", ".supers" ,function() {
         personImage.attr("data-animate", results[i].images.fixed_height.url);
         personImage.addClass("gif");
 
-
         // Appending the paragraph and personImage we created to the "gifDiv" div we created
-        gifDiv.append(p);
         gifDiv.append(personImage);
+        gifDiv.append(p);
 
         // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
         $("#gifsAssemble").prepend(gifDiv);
